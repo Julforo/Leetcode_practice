@@ -36,10 +36,10 @@ int * twosum(int *nums, int numsSize, int target, int *returnSize){
         } else if (sum > target){
             n--;
         } else{
-            results[0] = (objs[m].index<objs[n].index)?objs[m].index:objs[n].index;
-            results[1] = (objs[m].index<objs[n].index)?objs[n].index:objs[m].index;
-//            results[0] = objs[m].index;
-//            results[1] = objs[n].index;
+            //results[0] = (objs[m].index<objs[n].index)?objs[m].index:objs[n].index;
+            //results[1] = (objs[m].index<objs[n].index)?objs[n].index:objs[m].index;
+            results[0] = objs[m].index;
+            results[1] = objs[n].index;
             *returnSize = 2;
             return results;
         }
