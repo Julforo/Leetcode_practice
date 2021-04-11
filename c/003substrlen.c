@@ -6,12 +6,12 @@
 //Given a string s, find the length of the longest substring without repeating characters.
 //找出给定字符串中不含重复字符的最长字符串的长度
 //滑动窗口问题
-//
+
 int lengthOfLongestSubstring(char * s){
     int len = 0,max_len=0;
-    int offset[128];
-    memset(offset,0xff,sizeof(offset));
-    int front=0,rear=0;
+    int offset[128];//存字母对应ascii位置的出现的下标次数
+    memset(offset,0xff,sizeof(offset));//将其全置为-1
+    int front=0;
     for (int i = 0; i < strlen(s); i++)
     {
         //遍历整个字符串，并记录字符出现过的位置
